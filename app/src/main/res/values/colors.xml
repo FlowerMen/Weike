@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#333333</color>
+    <color name="colorPrimaryDark">#222222</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="divider">#AAAAAA</color>
+
+    <color name="tab_normal">#AAAAAA</color>
+    <color name="tab_selected">#58ae31</color>
+
+    <color name="adapter_lesson_title_text">@color/black</color>
+    <color name="adapter_lesson_lecturer_text">@color/divider</color>
+    <color name="adapter_lesson_status_text">@color/divider</color>
+    <color name="adapter_lesson_popularity_text">@color/divider</color>
+
+</resources>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#EEEEEE">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/user_avatar_image"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/ic_avatar"/>
+
+        <TextView
+            android:id="@+id/user_name_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/user_avatar_image"
+            android:layout_marginLeft="16dp"
+            android:text="用户昵称"
+            android:textColor="@color/black"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@id/user_avatar_image"
+            android:layout_marginTop="8dp"
+            android:background="@color/divider"/>
+        
+        <TextView
+            android:id="@+id/user_listener_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_below="@id/user_avatar_image"
+            android:layout_marginTop="16dp"
+            android:drawableLeft="@drawable/ic_user"
+            android:drawablePadding="6dp"
+            android:text="听课：0"
+            android:textSize="12sp"
+            android:textColor="@color/divider"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:layout_alignTop="@id/user_listener_text"
+            android:drawableLeft="@drawable/ic_chart"
+            android:drawablePadding="6dp"
+            android:text="累计收益：0.00"
+            android:textSize="12sp"
+            android:textColor="@color/divider"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/white"
+        android:paddingLeft="8dp"
+        android:gravity="center_vertical"
+        android:drawableLeft="@drawable/ic_doc"
+        android:drawablePadding="6dp"
+        android:text="购买/听课记录"
+        android:textSize="12sp"
+        android:textColor="@color/divider"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/white"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:gravity="center_vertical"
+            android:drawableLeft="@drawable/ic_live"
+            android:drawablePadding="6dp"
+            android:text="创建直播间"
+            android:textSize="12sp"
+            android:textColor="@color/divider"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/white"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:layout_marginTop="1dp"
+            android:gravity="center_vertical"
+            android:drawableLeft="@drawable/ic_live_favorite"
+            android:drawablePadding="6dp"
+            android:text="我关注的直播间"
+            android:textSize="12sp"
+            android:textColor="@color/divider"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/white"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:layout_marginTop="1dp"
+            android:gravity="center_vertical"
+            android:drawableLeft="@drawable/ic_microphone"
+            android:drawablePadding="6dp"
+            android:text="我讲的课"
+            android:textSize="12sp"
+            android:textColor="@color/divider"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/white"
+        android:paddingLeft="8dp"
+        android:gravity="center_vertical"
+        android:drawableLeft="@drawable/ic_setting"
+        android:drawablePadding="6dp"
+        android:text="通用"
+        android:textSize="12sp"
+        android:textColor="@color/divider"/>
+
+</LinearLayout>

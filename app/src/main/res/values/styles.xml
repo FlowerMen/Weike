@@ -1,0 +1,36 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="action_bar_title">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="adapter_lesson_title">
+        <item name="android:textSize">@dimen/adapter_lesson_title</item>
+        <item name="android:textColor">@color/adapter_lesson_title_text</item>
+    </style>
+
+    <style name="adapter_lesson_lecturer">
+        <item name="android:textSize">@dimen/adapter_lesson_summary</item>
+        <item name="android:textColor">@color/adapter_lesson_lecturer_text</item>
+    </style>
+
+    <style name="adapter_lesson_status">
+        <item name="android:textSize">@dimen/adapter_lesson_summary</item>
+        <item name="android:textColor">@color/adapter_lesson_status_text</item>
+    </style>
+
+    <style name="adapter_lesson_popularity">
+        <item name="android:textSize">@dimen/adapter_lesson_summary</item>
+        <item name="android:textColor">@color/adapter_lesson_popularity_text</item>
+    </style>
+
+</resources>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">XX微课</string>
+
+    <string name="home_tab_lesson">课程推荐</string>
+    <string name="home_tab_user">个人中心</string>
+
+</resources>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="100dp">
+
+    <ImageView
+        android:id="@+id/lesson_image"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/list_icon"/>
+
+    <TextView
+        style="@style/adapter_lesson_title"
+        android:id="@+id/lesson_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/lesson_image"
+        android:text="课程名称"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="10dp"
+        android:maxLines="1"/>
+
+    <TextView
+        style="@style/adapter_lesson_lecturer"
+        android:id="@+id/lesson_lecturer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@id/lesson_title"
+        android:text="课程讲师"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="10dp"
+        android:maxLines="1"/>
+
+    <TextView
+        style="@style/adapter_lesson_status"
+        android:id="@+id/lesson_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/lesson_title"
+        android:layout_alignParentBottom="true"
+        android:text="课程状态"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="12dp"
+        android:maxLines="1"/>
+
+    <View
+        android:layout_width="1px"
+        android:layout_height="match_parent"
+        android:layout_alignTop="@id/lesson_status"
+        android:layout_alignBottom="@id/lesson_status"
+        android:layout_toRightOf="@id/lesson_status"
+        android:background="@color/divider"/>
+
+    <TextView
+        style="@style/adapter_lesson_popularity"
+        android:id="@+id/lesson_popularity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/lesson_lecturer"
+        android:layout_below="@id/lesson_lecturer"
+        android:layout_alignTop="@id/lesson_status"
+        android:text="人气"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:maxLines="1"/>
+
+</RelativeLayout>
