@@ -8,6 +8,9 @@ import com.creacc.weike.app.fragment.UserFragment;
 import com.creacc.weike.presenter.HomePresenter;
 import com.creacc.weike.view.IHomeView;
 
+/**
+ * 测试提交代码
+ */
 public class HomeActivity extends PresenterActivity<HomePresenter> implements IHomeView {
 
     private RadioGroup mTabHost;
