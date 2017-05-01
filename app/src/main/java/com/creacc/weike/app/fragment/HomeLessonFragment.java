@@ -16,7 +16,6 @@ import java.util.List;
 
 public class HomeLessonFragment extends PresenterFragment<HomeLessonPresenter> implements IHomeListView {
 
-    protected View rootView;
     protected ViewPager mBannerPager;
     protected ListView mContentList;
 
@@ -35,8 +34,8 @@ public class HomeLessonFragment extends PresenterFragment<HomeLessonPresenter> i
 
     @Override
     protected void initializeFragment(View rootView) {
-        mBannerPager = (ViewPager) rootView.findViewById(R.id.banner_pager);
-        mContentList = (ListView) rootView.findViewById(R.id.content_list);
+        mBannerPager = findView(R.id.banner_pager);
+        mContentList = findView(R.id.content_list);
     }
 
     @Override

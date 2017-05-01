@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ *
  * Created by Creacc on 2017/4/8.
  */
 
@@ -35,8 +36,8 @@ public class HomeTabFragment extends PresenterFragment<HomeTabPresenter> impleme
 
     @Override
     protected void initializeFragment(View rootView) {
-        mFragmentPager = findView(rootView, R.id.fragment_pager);
-        mTabLayout = findView(rootView, R.id.tab_layout);
+        mFragmentPager = findView(R.id.fragment_pager);
+        mTabLayout = findView(R.id.tab_layout);
         mTabLayout.setupWithViewPager(mFragmentPager);
     }
 

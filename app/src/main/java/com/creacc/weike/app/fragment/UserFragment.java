@@ -8,7 +8,8 @@ import com.creacc.weike.presenter.UserPresenter;
 import com.creacc.weike.view.IUserView;
 
 /**
- * Created by Administrator on 2017/4/8.
+ *
+ * Created by Creacc on 2017/4/8.
  */
 
 public class UserFragment extends PresenterFragment<UserPresenter> implements IUserView {
@@ -29,7 +30,7 @@ public class UserFragment extends PresenterFragment<UserPresenter> implements IU
 
     @Override
     protected void initializeFragment(View rootView) {
-        mAvatarImage = (ImageView) rootView.findViewById(R.id.user_avatar_image);
+        mAvatarImage = findView(R.id.user_avatar_image);
     }
 
     @Override
