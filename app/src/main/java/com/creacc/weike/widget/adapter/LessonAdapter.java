@@ -6,22 +6,22 @@ import android.widget.ImageView;
 
 import com.creacc.weike.R;
 import com.creacc.weike.bean.LessonEntity;
-import com.creacc.weike.widget.adapter.listview.CCAdapter;
 import com.creacc.weike.widget.adapter.listview.CCAdapterHandler;
 import com.creacc.weike.widget.adapter.listview.CCAdapterHolder;
+import com.creacc.weike.widget.adapter.listview.CCBaseAdapter;
 
 /**
  * Created by Creacc on 2017/4/6.
  */
 
-public class LessonAdapter extends CCAdapter<LessonEntity> {
+public class LessonAdapter extends CCBaseAdapter<LessonEntity> {
 
     public LessonAdapter(Context context, CCAdapterHandler<LessonEntity> content) {
         super(context, content);
     }
 
     @Override
-    public CCAdapterHolder<LessonEntity> createAdapterHolder() {
+    protected CCAdapterHolder<LessonEntity> createHolder(int type) {
         return new CCAdapterHolder<LessonEntity>() {
 
             ImageView mLessonImage;
@@ -32,8 +32,8 @@ public class LessonAdapter extends CCAdapter<LessonEntity> {
             }
 
             @Override
-            public void initializeView(View rootView) {
-                mLessonImage = (ImageView) rootView.findViewById(R.id.lesson_image);
+            public void initializeView(View convertView, int position) {
+                mLessonImage = (ImageView) convertView.findViewById(R.id.lesson_image);
             }
 
             @Override
@@ -41,4 +41,5 @@ public class LessonAdapter extends CCAdapter<LessonEntity> {
             }
         };
     }
+
 }

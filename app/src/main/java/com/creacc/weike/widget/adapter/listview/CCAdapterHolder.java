@@ -3,13 +3,31 @@ package com.creacc.weike.widget.adapter.listview;
 import android.view.View;
 
 /**
- * Created by apple on 2015/12/12.
+ * Created by yanhaifeng on 16-7-27.
  */
-public interface CCAdapterHolder<ContentType> {
 
+public interface CCAdapterHolder<T> {
+
+    /**
+     * Decide which layout to display.
+     *
+     * @return Item layout id.
+     */
     int getResource();
 
-    void initializeView(View rootView);
+    /**
+     * Initialize views in layout.
+     *
+     * @param convertView Layout view.
+     * @param position Item position.
+     */
+    void initializeView(View convertView, int position);
 
-    void updateView(ContentType content, int position);
+    /**
+     * Update layout views by content.
+     *
+     * @param content Item content.
+     * @param position Item position.
+     */
+    void updateView(T content, int position);
 }

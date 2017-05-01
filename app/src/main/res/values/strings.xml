@@ -4,4 +4,8 @@
     <string name="home_tab_lesson">课程推荐</string>
     <string name="home_tab_user">个人中心</string>
 
+    <!--adapter-->
+    <string name="le_adapter_holder_tag_key">le_adapter_holder_tag_key</string>
+    <string name="le_adapter_holder_index_tag_key">le_adapter_holder_index_tag_key</string>
+
 </resources>
