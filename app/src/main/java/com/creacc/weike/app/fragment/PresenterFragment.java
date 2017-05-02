@@ -9,25 +9,29 @@ import android.view.ViewGroup;
 import com.creacc.weike.presenter.BasePresenter;
 
 /**
+ * 对一些共通的方法进行一些封装，简化操作，如果不满足需求可以直接继承{@link BaseFragment}
+ *
  * Created by Creacc on 2017/4/7.
  */
 
-public abstract class PresenterFragment<T extends BasePresenter> extends BaseFragment {
+public abstract class PresenterFragment<Presenter extends BasePresenter> extends BaseFragment {
 
-    private T mPresenter;
+    private Presenter mPresenter;
 
     private boolean mIsFirstResume = true;
+
+    private View mRootView;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View rootView = inflater.inflate(getLayoutResource(), container, false);
-        initializeFragment(rootView);
+        mRootView = inflater.inflate(getLayoutResource(), container, false);
+        initializeFragment(mRootView);
         mPresenter = createPresenter();
         if (mPresenter != null) {
             mPresenter.onViewCreated();
         }
-        return rootView;
+        return mRootView;
     }
 
     @Override
@@ -59,8 +63,13 @@ public abstract class PresenterFragment<T extends BasePresenter> extends BaseFra
         }
     }
 
-    public T getPresenter() {
+    public Presenter getPresenter() {
         return mPresenter;
+    }
+
+    @SuppressWarnings("unchecked")
+    protected  <T extends View> T findView(int id) {
+        return (T) findView(mRootView, id);
     }
 
     protected void onFirstResume() {
@@ -73,5 +82,5 @@ public abstract class PresenterFragment<T extends BasePresenter> extends BaseFra
 
     protected abstract void initializeFragment(View rootView);
 
-    protected abstract T createPresenter();
+    protected abstract Presenter createPresenter();
 }
