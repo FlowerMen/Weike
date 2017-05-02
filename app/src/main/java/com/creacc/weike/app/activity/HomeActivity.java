@@ -10,7 +10,7 @@ import com.creacc.weike.presenter.HomePresenter;
 import com.creacc.weike.view.IHomeView;
 
 /**
- * 测试提交代码1
+ * 测试提交代码1123123
  */
 public class HomeActivity extends PresenterActivity<HomePresenter> implements IHomeView {
 
