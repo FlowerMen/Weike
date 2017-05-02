@@ -2,18 +2,17 @@ package com.creacc.weike.app.activity;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.widget.Toolbar;
 
-import com.creacc.weike.R;
 import com.creacc.weike.presenter.BasePresenter;
 
 /**
+ * 对一些共通的方法进行一些封装，简化操作，如果不满足需求可以直接继承{@link BaseActivity}
+ *
  * Created by Creacc on 2017/4/6.
  */
 
 public abstract class PresenterActivity<T extends BasePresenter> extends BaseActivity {
 
-    private Toolbar mToolBar;
 
     private T mPresenter;
 
@@ -27,20 +26,6 @@ public abstract class PresenterActivity<T extends BasePresenter> extends BaseAct
         mPresenter = createPresenter();
         if (mPresenter != null) {
             mPresenter.onViewCreated();
-        }
-        mToolBar = findView(R.id.tool_bar);
-        setSupportActionBar(mToolBar);
-    }
-
-    public void setTitle(int title) {
-        if (mToolBar != null) {
-            mToolBar.setTitle(title);
-        }
-    }
-
-    public void setTitle(String title) {
-        if (mToolBar != null) {
-            mToolBar.setTitle(title);
         }
     }
 

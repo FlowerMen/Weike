@@ -1,5 +1,6 @@
 package com.creacc.weike.app.activity;
 
+import android.support.v7.widget.Toolbar;
 import android.widget.RadioGroup;
 
 import com.creacc.weike.R;
@@ -9,6 +10,8 @@ import com.creacc.weike.presenter.HomePresenter;
 import com.creacc.weike.view.IHomeView;
 
 public class HomeActivity extends PresenterActivity<HomePresenter> implements IHomeView {
+
+    private Toolbar mToolBar;
 
     private RadioGroup mTabHost;
 
@@ -22,6 +25,8 @@ public class HomeActivity extends PresenterActivity<HomePresenter> implements IH
 
     @Override
     protected void initializeActivity() {
+        mToolBar = findView(R.id.tool_bar);
+        setSupportActionBar(mToolBar);
         mTabHost = findView(R.id.bottom_tab_layout);
         mTabHost.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override

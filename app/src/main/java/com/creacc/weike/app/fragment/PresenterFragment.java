@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import com.creacc.weike.presenter.BasePresenter;
 
 /**
+ * 对一些共通的方法进行一些封装，简化操作，如果不满足需求可以直接继承{@link BaseFragment}
  *
  * Created by Creacc on 2017/4/7.
  */
