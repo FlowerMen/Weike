@@ -17,8 +17,6 @@ public class CCAdapterHandler<T> extends ArrayList<T> {
 
     private ContentObserver mContentObserver;
 
-    private AtomicBoolean mIsDataChanged = new AtomicBoolean(false);
-
     private AtomicBoolean mIsNotifyPaused = new AtomicBoolean(false);
 
     public CCAdapterHandler() {
@@ -47,7 +45,7 @@ public class CCAdapterHandler<T> extends ArrayList<T> {
      * otherwise do nothing.
      */
     public void resumeNotify() {
-        if (mIsNotifyPaused.compareAndSet(true, false) && mIsDataChanged.compareAndSet(true, false)) {
+        if (mIsNotifyPaused.compareAndSet(true, false)) {
             notifyObserver(true);
         }
     }
@@ -158,9 +156,7 @@ public class CCAdapterHandler<T> extends ArrayList<T> {
     private void notifyObserver(boolean force) {
         boolean needToNotify = force;
         if (force == false) {
-            if (mIsNotifyPaused.get()) {
-                mIsDataChanged.set(true);
-            } else {
+            if (mIsNotifyPaused.get() == false) {
                 needToNotify = true;
             }
         }
